@@ -1,5 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
-const App = () => <h1 role="heading" className="test">Our First Test</h1>;
+const App = () => {
+  const [heading, setHeading] = useState("Magnificent Monkeys");
+
+  const clickHandler = () => {
+    setHeading("Radical Rhinos");
+  };
+
+  return (
+    <>
+      <button type="button" onClick={clickHandler}>
+        click
+      </button>
+      <h1>{heading}</h1>
+    </>
+  );
+};
 
 export default App;
